@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/list_item"
+        android:orientation="horizontal"
+        android:id="@+id/llListItemText"
+        tools:ignore="RtlHardcoded" >
+
+        <TextView
+            android:id="@+id/tvListEventDate"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-5dp"
+            android:layout_marginLeft="15dp"
+            android:ems="4"
+            android:height="50dp"/>
+	
+	    <TextView
+	        android:id="@+id/tvListEventName"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:paddingRight="100dp"
+	        android:height="50dp"
+	        android:gravity="start|center_vertical"
+	        android:singleLine="true"
+		    android:scrollHorizontally="true"
+		    android:ellipsize="end"
+	        />
+    </LinearLayout>
+	<!-- 削除ボタン -->
+    <Button 
+        android:id="@+id/btnListDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="15dp"
+        android:gravity="center"
+		android:text="@string/lblDelete"
+        android:background="@drawable/button_normal"
+        tools:ignore="RtlSymmetry,RtlHardcoded" />
+    <!-- 日数カウント -->
+    <RelativeLayout
+        android:id="@+id/tlListDateCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="5dp"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:background="@drawable/list_item_count"
+        tools:ignore="RtlSymmetry,RtlHardcoded" >
+	    <!-- 年 -->
+        <LinearLayout 
+	        android:layout_width="80dp"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="7dp"
+	        android:layout_gravity="center"
+	        android:orientation="horizontal"
+	        android:id="@+id/trListDateCount01">
+	        <!-- 年　数値 -->
+            <TextView 
+		        android:layout_width="40dp"
+		        android:layout_height="wrap_content"
+		        android:gravity="right"
+		        android:layout_weight="1"
+		        android:textSize="23sp"
+		        android:textColor="@color/taupe"
+		        android:scrollHorizontally="true"
+		        android:ellipsize="end"
+		        android:id="@+id/tvListDateCountYear"/>
+            <TextView 
+		        android:layout_width="40dp"
+		        android:layout_height="wrap_content"
+		        android:gravity="center_vertical"
+		        android:layout_weight="1"
+		        android:textSize="12sp"
+		        android:textColor="@color/darkgray"
+		        android:scrollHorizontally="true"
+		        android:ellipsize="end"
+		        android:text="@string/lblListYear"
+		        android:id="@+id/tvListDateCountYearlbl"/>
+        </LinearLayout>
+	    <!-- 月 -->
+        <LinearLayout 
+	        android:layout_width="80dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/trListDateCount01"
+	        android:layout_marginTop="-15dp"
+	        android:layout_gravity="center"
+	        android:orientation="horizontal"
+	        android:id="@+id/trListDateCount02">
+	        <!-- 月　数値 -->
+            <TextView 
+		        android:layout_width="40dp"
+		        android:layout_height="wrap_content"
+		        android:gravity="right"
+		        android:layout_weight="1"
+		        android:textSize="23sp"
+		        android:textColor="@color/taupe"
+		        android:scrollHorizontally="true"
+		        android:ellipsize="end"
+		        android:id="@+id/tvListDateCountMonth"/>
+            <TextView 
+		        android:layout_width="40dp"
+		        android:layout_height="wrap_content"
+		        android:gravity="center_vertical"
+		        android:layout_weight="1"
+		        android:textSize="12sp"
+		        android:textColor="@color/darkgray"
+		        android:scrollHorizontally="true"
+		        android:ellipsize="end"
+		        android:text="@string/lblListMonth"
+		        android:id="@+id/tvListDateCountMonthlbl"/>
+        </LinearLayout>
+	    <!-- 日 -->
+        <LinearLayout 
+	        android:layout_width="80dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/trListDateCount02"
+	        android:layout_marginTop="-15dp"
+	        android:layout_gravity="center"
+	        android:orientation="horizontal"
+	        android:id="@+id/trListDateCount03">
+	        <!-- 日　数値 -->
+            <TextView 
+		        android:layout_width="40dp"
+		        android:layout_height="wrap_content"
+		        android:gravity="right"
+		        android:layout_weight="1"
+		        android:textSize="23sp"
+		        android:textColor="@color/taupe"
+		        android:scrollHorizontally="true"
+		        android:ellipsize="end"
+		        android:id="@+id/tvListDateCountDay"/>
+            <TextView 
+		        android:layout_width="40dp"
+		        android:layout_height="wrap_content"
+		        android:gravity="center_vertical"
+		        android:layout_weight="1"
+		        android:textSize="12sp"
+		        android:textColor="@color/darkgray"
+		        android:scrollHorizontally="true"
+		        android:ellipsize="end"
+		        android:text="@string/lblListDay"
+		        android:id="@+id/tvListDateCountDaylbl"/>
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

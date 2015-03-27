@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+    <TableRow 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/trInputEventName"
+        >
+	    <!-- イベント件名ラベル -->
+	    <TextView
+	        android:id="@+id/lblEventName"
+	        android:layout_width="50dp"
+	        android:layout_height="wrap_content"
+	        android:padding="5dp"
+	        android:layout_margin="5dp"
+	        android:text="@string/lblEventName" />
+	    <!-- イベント件名入力欄 -->
+	    <EditText
+	        android:id="@+id/txtEventName"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+            android:layout_weight="1"
+	        android:padding="5dp"
+	        android:layout_margin="5dp"
+			android:background="@drawable/text_frame"
+	        android:inputType="text"/>
+    </TableRow>
+    
+    <TableRow 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/trInputEventDate"
+        >
+	    <!-- イベント日付ラベル -->
+	    <TextView
+	        android:id="@+id/lblEventDate"
+	        android:layout_width="50dp"
+	        android:layout_height="wrap_content"
+	        android:padding="5dp"
+	        android:layout_margin="5dp"
+	        android:text="@string/lblEventDate" />
+	  
+	    <!-- イベント日付入力欄 -->
+		<TextView
+	        android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+            android:layout_weight="1"
+	        android:padding="5dp"
+	        android:layout_margin="5dp"
+			android:ems="8"
+			android:maxEms="10"
+			android:textSize="18sp"
+			android:background="@drawable/text_frame"
+			android:id="@+id/tvInputEventDate"/>
+    </TableRow>
+	<!-- コメント -->
+    <TableRow
+        android:id="@+id/trInputComment"
+        android:layout_width="match_parent"
+	    android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/lblComment"
+	        android:layout_width="80dp"
+            android:layout_height="wrap_content"
+	        android:padding="5dp"
+	        android:layout_margin="5dp"
+            android:text="@string/lblComment" />
+        <EditText
+            android:id="@+id/txtComment"
+	        android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+	        android:padding="5dp"
+	        android:layout_margin="5dp"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:lines="3"
+            android:maxLines="3" 
+			android:background="@drawable/text_frame">
+            <requestFocus />
+        </EditText>
+    </TableRow>
+    <LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/trInputButtons"
+        >
+	    <!-- 入力ボタン -->
+	    <Button
+	        android:id="@+id/btnInputSubmit"
+	        android:layout_width="wrap_content"
+	        android:layout_height="30dp"
+	        android:layout_margin="5dp"
+	        android:text="@string/lblInput"
+	        android:textSize="12sp"
+	        android:background="@drawable/button_normal"
+	        />
+	    <!-- 削除ボタン -->
+	    <Button
+	        android:id="@+id/btnInputDelete"
+	        android:layout_width="wrap_content"
+	        android:layout_height="30dp"
+	        android:layout_margin="5dp"
+	        android:text="@string/lblDelete"
+	        android:textSize="12sp"
+	        android:background="@drawable/button_normal"
+	        tools:ignore="RtlHardcoded" />
+	    <!-- クリアボタン -->
+	    <Button
+	        android:id="@+id/btnInputClear"
+	        android:layout_width="wrap_content"
+	        android:layout_height="30dp"
+	        android:layout_margin="5dp"
+	        android:text="@string/lblClear"
+	        android:textSize="12sp"
+	        android:background="@drawable/button_normal"
+	        tools:ignore="RtlHardcoded" />
+    </LinearLayout>
+    
+
+
+</TableLayout>

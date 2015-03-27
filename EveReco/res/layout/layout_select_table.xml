@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="2dp" 
+    android:layout_gravity="center_horizontal"
+    android:background="@color/ivory">
+        <!-- カレンダー -->
+        <TextView 
+		    android:layout_width="0dp"
+		    android:layout_height="match_parent"
+		    android:layout_weight="2"
+		    android:layout_margin="2dp"
+		    android:text="@string/lblMenuCalendar"
+		    android:textSize="20sp"
+	    	android:background="@color/lightsalmon"
+		    android:id="@+id/tvSelectTable01"/>
+        <!-- リスト -->
+        <TextView 
+		    android:layout_width="0dp"
+		  	android:layout_height="match_parent"
+		    android:layout_weight="2"
+		    android:layout_margin="2dp"
+		  	android:text="@string/lblMenuList"
+		  	android:textSize="20sp"
+	    	android:background="@color/nile_blue"
+		  	android:id="@+id/tvSelectTable04"/>
+        <!-- Option -->
+        <TextView 
+		    android:layout_width="0dp"
+		  	android:layout_height="match_parent"
+		    android:layout_weight="1"
+		    android:layout_margin="2dp"
+		  	android:text="@string/lblMenuOption"
+		  	android:textSize="20sp"
+	    	android:background="@color/darkgray"
+		  	android:id="@+id/tvSelectTable03"/>
+</LinearLayout>
