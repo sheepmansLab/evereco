@@ -1,8 +1,8 @@
 package jp.sheepman.evereco.fragment;
 
 import java.util.Calendar;
-import java.util.Date;
 
+import jp.sheepman.common.fragment.BaseDialogFragment;
 import jp.sheepman.common.fragment.BaseFragment;
 import jp.sheepman.common.util.CalendarUtil;
 import jp.sheepman.evereco.R;
@@ -16,7 +16,6 @@ import jp.sheepman.evereco.model.EventUpdateModel;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
-import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.os.Bundle;
@@ -27,7 +26,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class EventInputDialogFragment extends DialogFragment {
+public class EventInputDialogFragment extends BaseDialogFragment {
 	private int id;
 	
 	private EditText etEventName;
@@ -257,4 +256,8 @@ public class EventInputDialogFragment extends DialogFragment {
 			clearContents();
 		}
 	};
+
+	@Override
+	public void callback() {
+	}
 }
