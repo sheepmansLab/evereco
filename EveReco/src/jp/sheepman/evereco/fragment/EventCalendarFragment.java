@@ -2,7 +2,6 @@ package jp.sheepman.evereco.fragment;
 
 import java.util.Calendar;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
 
 import jp.sheepman.common.fragment.BaseFragment;
@@ -20,7 +19,6 @@ import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
-import android.view.animation.AnimationSet;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
