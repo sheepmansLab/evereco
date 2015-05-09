@@ -1,8 +1,9 @@
 package jp.sheepman.evereco.fragment;
 
+import jp.sheepman.common.form.BaseForm;
+import jp.sheepman.common.fragment.BaseFragment;
 import jp.sheepman.evereco.MainActivity;
 import jp.sheepman.evereco.R;
-import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,7 +11,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class SelectTableFragment extends Fragment implements OnClickListener {
+public class SelectTableFragment extends BaseFragment implements OnClickListener {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -34,5 +35,14 @@ public class SelectTableFragment extends Fragment implements OnClickListener {
 	public void onClick(View v) {
 		MainActivity parent = (MainActivity)getActivity();
 		parent.callback(v.getId());
+	}
+
+	@Override
+	public void callback() {
+	}
+
+	@Override
+	public void callback(BaseForm arg0) {
+		this.callback();
 	}
 }

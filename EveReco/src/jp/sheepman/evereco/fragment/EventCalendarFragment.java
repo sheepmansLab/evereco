@@ -4,6 +4,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+import jp.sheepman.common.form.BaseForm;
 import jp.sheepman.common.fragment.BaseFragment;
 import jp.sheepman.common.util.CalendarUtil;
 import jp.sheepman.evereco.R;
@@ -225,5 +226,10 @@ public class EventCalendarFragment extends BaseFragment {
 	@Override
 	public void callback() {
 		createCalendarView(getView(), cal, false);
+	}
+
+	@Override
+	public void callback(BaseForm arg0) {
+		this.callback();
 	}
 }

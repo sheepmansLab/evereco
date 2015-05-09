@@ -2,6 +2,7 @@ package jp.sheepman.evereco.fragment;
 
 import java.util.Calendar;
 
+import jp.sheepman.common.form.BaseForm;
 import jp.sheepman.common.fragment.BaseDialogFragment;
 import jp.sheepman.common.fragment.BaseFragment;
 import jp.sheepman.common.util.CalendarUtil;
@@ -259,5 +260,10 @@ public class EventInputDialogFragment extends BaseDialogFragment {
 
 	@Override
 	public void callback() {
+	}
+
+	@Override
+	public void callback(BaseForm arg0) {
+		this.callback();
 	}
 }

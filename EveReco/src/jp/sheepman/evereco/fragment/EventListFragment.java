@@ -4,6 +4,7 @@ import java.util.Calendar;
 import java.util.List;
 
 import jp.sheepman.common.adapter.BaseCustomAdapter;
+import jp.sheepman.common.form.BaseForm;
 import jp.sheepman.common.fragment.BaseFragment;
 import jp.sheepman.common.util.CalendarUtil;
 import jp.sheepman.evereco.R;
@@ -517,5 +518,9 @@ public class EventListFragment extends BaseFragment {
 	public void callback() {
 		reload();
 	}
-	
+
+	@Override
+	public void callback(BaseForm arg0) {
+		this.callback();
+	}
 }
